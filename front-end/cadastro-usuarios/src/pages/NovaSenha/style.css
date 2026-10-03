@@ -1,0 +1,261 @@
+
+.nova-senha-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.nova-senha-container {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 60px;
+  align-items: center;
+}
+.nova-senha-info {
+  padding: 20px;
+}
+
+.info-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf4ff;
+  border-radius: 18px;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.nova-senha-info h1 {
+  font-size: 42px;
+  margin: 0 0 18px;
+  color: #172033;
+}
+
+.nova-senha-info > p {
+  max-width: 520px;
+  color: #697386;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.benefit-icon {
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef7ff;
+  border-radius: 12px;
+  color: #1877f2;
+  font-size: 18px;
+}
+
+.benefit div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.benefit strong {
+  color: #172033;
+  font-size: 15px;
+}
+
+.benefit span {
+  color: #7a8496;
+  font-size: 14px;
+}
+
+/* CARD */
+
+.nova-senha-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 38px;
+  box-shadow: 0 15px 50px rgba(20, 40, 80, 0.1);
+}
+
+.nova-senha-header {
+  margin-bottom: 30px;
+}
+
+.small-tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eef6ff;
+  color: #1976d2;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.nova-senha-header h2 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 28px;
+}
+
+.nova-senha-header p {
+  margin: 0;
+  color: #7a8496;
+  font-size: 14px;
+}
+
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe4ec;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 50px;
+  padding: 0 48px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 11px;
+  box-sizing: border-box;
+}
+
+.input-wrapper:focus-within {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+.show-password {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #7a8496;
+  font-size: 17px;
+}
+
+
+.password-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 5px 0 25px;
+  font-size: 12px;
+  color: #687386;
+}
+
+/* BOTÃO */
+
+.change-password-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 11px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.change-password-btn:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+}
+
+.change-password-btn span {
+  font-size: 20px;
+}
+
+/* VOLTAR */
+
+.back-login {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #7a8496;
+}
+
+.back-login button {
+  border: none;
+  background: none;
+  color: #1976d2;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* SEGURANÇA */
+
+.security {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f4;
+  text-align: center;
+  color: #8a94a6;
+  font-size: 12px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+  .nova-senha-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 20px;
+  }
+
+  .nova-senha-info {
+    text-align: center;
+  }
+
+  .nova-senha-info > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benefit {
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .nova-senha-page {
+    padding: 30px 15px;
+  }
+
+  .nova-senha-info h1 {
+    font-size: 32px;
+  }
+
+  .nova-senha-card {
+    padding: 25px 20px;
+  }
+}

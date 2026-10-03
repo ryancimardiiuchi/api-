@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+.verificacao-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f5f7fa;
+}
+
+.verificacao-card {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1677ff;
+  margin-bottom: 25px;
+}
+
+.verificacao-card h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.descricao {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.email-enviado {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.codigo-input {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 8px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.codigo-input:focus {
+  border-color: #1677ff;
+}
+
+.verificar-button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #1677ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.verificar-button:hover {
+  background: #0d63d8;
+}
+
+.reenviar-button {
+  margin-top: 18px;
+  border: none;
+  background: transparent;
+  color: #1677ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.reenviar-button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .verificacao-card {
+    padding: 30px 22px;
+  }
+}

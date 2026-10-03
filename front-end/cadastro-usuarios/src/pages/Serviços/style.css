@@ -1,0 +1,171 @@
+.precos-page {
+    min-height: 100vh;
+    background: #f7f9fc;
+    padding: 70px 30px;
+}
+
+.precos-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.precos-tag {
+    display: inline-block;
+    background: #e7f2ff;
+    color: #1677ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.precos-header h1 {
+    color: #12284f;
+    font-size: 38px;
+    margin: 0 0 10px;
+}
+
+.precos-header p {
+    color: #71809b;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* SERVIÇOS */
+
+.servicos-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* CARD */
+
+.servico-card {
+    background: white;
+    border: 1px solid #e8eef7;
+    border-radius: 16px;
+    padding: 30px;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ÍCONE */
+
+.servico-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7f2ff;
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+
+/* TEXTO */
+
+.servico-card h2 {
+    color: #12284f;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.servico-card p {
+    color: #71809b;
+    font-size: 14px;
+    line-height: 1.5;
+
+    min-height: 42px;
+}
+
+
+/* PREÇO */
+
+.servico-preco {
+    margin: 25px 0;
+}
+
+.servico-preco strong {
+    color: #1677ff;
+    font-size: 30px;
+}
+
+.servico-preco span {
+    color: #71809b;
+    font-size: 14px;
+}
+
+
+/* BOTÃO */
+
+.adicionar-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1677ff;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.adicionar-btn:hover {
+    background: #0865e5;
+    transform: translateY(-1px);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .precos-page {
+        padding: 50px 20px;
+    }
+
+    .precos-header h1 {
+        font-size: 30px;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+}

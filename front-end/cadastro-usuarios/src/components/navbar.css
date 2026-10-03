@@ -1,0 +1,183 @@
+.links {
+    text-decoration: none;
+    color: #263653;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+}
+
+.links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #263653;
+    transition: 0.3s;
+}
+
+.links:hover::after {
+    width: 100%;
+}
+header {
+  width: 100%;
+
+  background: white;
+
+  border-bottom: 1px solid #e8eef7;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1450px;
+
+  min-height: 80px;
+
+  margin: auto;
+
+  padding: 0 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transform: translateY(10px);
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7f2ff;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.logo-text h2 {
+  color: #12284f;
+
+  font-size: 27px;
+}
+
+.logo-text span {
+  display: block;
+
+  color: #71809b;
+
+  font-size: 12px;
+}
+
+
+
+
+.nav-links a {
+  color: #263653;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1677ff;
+}
+
+.nav-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+.btn-login {
+    padding: 10px 20px;
+    background: #1677ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-login:hover {
+    background: #0865e5;
+    transform: translateY(-1px);
+}
+
+
+.btn-carrinho {
+    padding: 10px 18px;
+    background: #f1f4f8;
+    color: #263653;
+    border: 1px solid #e1e6ed;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-carrinho:hover {
+    background: #e8edf3;
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 25px;
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .logo-text h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-nav .nav-item {
+    white-space: nowrap;
+  }
+}

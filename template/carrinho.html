@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lavô+ | Meu Pedido</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    🧺
+                </div>
+
+                <div class="logo-text">
+                    <h2>Lavô+</h2>
+                    <span>Sua lavanderia online</span>
+                </div>
+
+            </a>
+
+
+            <div class="menu">
+
+                <a href="index.html">Início</a>
+                <a href="index.html#servicos">Serviços</a>
+                <a href="precos.html">Preços</a>
+                <a href="index.html#como-funciona">Como funciona</a>
+                <a href="index.html#sobre">Sobre nós</a>
+                <a href="index.html#contato">Contato</a>
+
+            </div>
+
+
+            <div class="actions">
+
+                <a href="login.html">
+                    <button class="btn-outline">
+                        👤 Entrar
+                    </button>
+                </a>
+
+                <button class="btn-cart active-cart">
+                    🛒 Meu pedido
+
+                    <span class="notification">
+                        2
+                    </span>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CARRINHO
+    ========================== -->
+
+    <main class="cart-page">
+
+        <div class="cart-container">
+
+            <!-- TÍTULO -->
+
+            <div class="page-title">
+
+                <span class="tag">
+                    🛒 Seu pedido
+                </span>
+
+                <h1>
+                    Meu pedido
+                </h1>
+
+                <p>
+                    Confira os serviços escolhidos antes de continuar.
+                </p>
+
+            </div>
+
+
+            <!-- ÁREA PRINCIPAL -->
+
+            <div class="cart-layout">
+
+
+                <!-- =========================
+                     PRODUTOS
+                ========================== -->
+
+                <section class="cart-items">
+
+                    <div class="cart-header">
+
+                        <h2>
+                            Serviços selecionados
+                        </h2>
+
+                        <span>
+                            2 itens
+                        </span>
+
+                    </div>
+
+
+                    <!-- LAVAGEM -->
+
+                    <div class="cart-item">
+
+                        <div class="item-icon">
+                            🧺
+                        </div>
+
+                        <div class="item-info">
+
+                            <h3>
+                                Lavagem
+                            </h3>
+
+                            <p>
+                                Roupas do dia a dia
+                            </p>
+
+                            <span class="item-quantity">
+                                5 kg
+                            </span>
+
+                        </div>
+
+                        <div class="item-price">
+                            R$ 75,00
+                        </div>
+
+                        <button class="remove-btn">
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <!-- PASSADORIA -->
+
+                    <div class="cart-item">
+
+                        <div class="item-icon">
+                            👔
+                        </div>
+
+                        <div class="item-info">
+
+                            <h3>
+                                Passadoria
+                            </h3>
+
+                            <p>
+                                Roupas passadas com perfeição
+                            </p>
+
+                            <span class="item-quantity">
+                                2 peças
+                            </span>
+
+                        </div>
+
+                        <div class="item-price">
+                            R$ 16,00
+                        </div>
+
+                        <button class="remove-btn">
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <!-- ADICIONAR MAIS -->
+
+                    <a href="precos.html" class="add-more">
+                        + Adicionar outro serviço
+                    </a>
+
+                </section>
+
+
+                <!-- =========================
+                     RESUMO
+                ========================== -->
+
+                <aside class="order-summary">
+
+                    <h2>
+                        Resumo do pedido
+                    </h2>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong>
+                            R$ 91,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Taxa de coleta
+                        </span>
+
+                        <strong>
+                            R$ 5,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+                    <div class="total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong>
+                            R$ 96,00
+                        </strong>
+
+                    </div>
+
+
+                    <button class="continue-btn"
+                            onclick="continuarPedido()">
+
+                        CONTINUAR
+                        <span>→</span>
+
+                    </button>
+
+
+                    <p class="secure">
+                        🔒 Pagamento seguro
+                    </p>
+
+                </aside>
+
+            </div>
+
+
+            <!-- =========================
+                 INFORMAÇÕES
+            ========================== -->
+
+            <div class="cart-benefits">
+
+                <div>
+
+                    <span>
+                        🚚
+                    </span>
+
+                    <div>
+                        <strong>
+                            Coleta na sua casa
+                        </strong>
+
+                        <p>
+                            Escolha o melhor horário
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🧺
+                    </span>
+
+                    <div>
+                        <strong>
+                            Cuidado especial
+                        </strong>
+
+                        <p>
+                            Tratamos suas roupas com carinho
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🏠
+                    </span>
+
+                    <div>
+                        <strong>
+                            Entrega na sua porta
+                        </strong>
+
+                        <p>
+                            Receba tudo limpo e dobrado
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>Lavô+</h2>
+
+                <p>
+                    Sua lavanderia online.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Contato</h4>
+
+                <p>📞 (49) 99999-9999</p>
+                <p>📧 contato@lavomais.com</p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Redes sociais</h4>
+
+                <p>Instagram</p>
+                <p>Facebook</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Lavô+ — Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function continuarPedido() {
+
+            window.location.href = "coleta.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

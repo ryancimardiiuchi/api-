@@ -1,0 +1,751 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f9ff,
+            #ffffff
+        );
+
+    color: #14213d;
+
+    min-height: 100vh;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    width: 100%;
+
+    background: white;
+
+    border-bottom:
+        1px solid #e8eef7;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar {
+
+    max-width: 1450px;
+
+    height: 80px;
+
+    margin: auto;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.logo-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e7f2ff;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.logo-text h2 {
+
+    color: #12284f;
+
+    font-size: 27px;
+}
+
+.logo-text span {
+
+    display: block;
+
+    color: #71809b;
+
+    font-size: 12px;
+}
+
+
+/* VOLTAR */
+
+.back-home a {
+
+    color: #1677ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.back-home a:hover {
+
+    color: #0865e5;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   PÁGINA LOGIN
+========================================================= */
+
+.login-page {
+
+    min-height:
+        calc(100vh - 80px);
+
+    padding:
+        60px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    min-height: 560px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    background: white;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(30, 80, 140, .10);
+
+    border:
+        1px solid #e5edf7;
+}
+
+
+/* =========================================================
+   LADO INFORMATIVO
+========================================================= */
+
+.login-info {
+
+    padding: 55px 50px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eaf5ff,
+            #f7fbff
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.info-icon {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 18px;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(22,119,255,.08);
+}
+
+.login-info h1 {
+
+    color: #13244a;
+
+    font-size: 35px;
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+.login-info > p {
+
+    color: #61718b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 420px;
+
+    margin-bottom: 30px;
+}
+
+
+/* BENEFÍCIOS */
+
+.benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+}
+
+.benefit-icon {
+
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+.benefit strong {
+
+    display: block;
+
+    color: #243654;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+.benefit span {
+
+    display: block;
+
+    color: #71809b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CARD LOGIN
+========================================================= */
+
+.login-card {
+
+    padding: 55px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* CABEÇALHO */
+
+.login-header {
+
+    margin-bottom: 30px;
+}
+
+.small-tag {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background: #e9f4ff;
+
+    color: #1674ee;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+}
+
+.login-header h2 {
+
+    color: #14264c;
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+.login-header p {
+
+    color: #78869b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.input-group {
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+
+    display: block;
+
+    color: #263653;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.password-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.password-label a {
+
+    color: #1677ff;
+
+    font-size: 11px;
+
+    font-weight: normal;
+}
+
+.password-label a:hover {
+
+    text-decoration: underline;
+}
+
+.input-wrapper {
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 14px;
+
+    background: #f9fbfe;
+
+    border:
+        1px solid #dce6f2;
+
+    border-radius: 9px;
+
+    transition: .3s;
+}
+
+.input-wrapper:focus-within {
+
+    background: white;
+
+    border-color: #1677ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22,119,255,.08);
+}
+
+.input-wrapper > span {
+
+    font-size: 16px;
+
+    opacity: .8;
+}
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #263653;
+
+    font-size: 13px;
+}
+
+.input-wrapper input::placeholder {
+
+    color: #a0aabd;
+}
+
+
+/* MOSTRAR SENHA */
+
+.show-password {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    opacity: .7;
+
+    padding: 3px;
+}
+
+.show-password:hover {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   LEMBRAR
+========================================================= */
+
+.remember {
+
+    margin-bottom: 20px;
+}
+
+.remember label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #71809b;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.remember input {
+
+    accent-color: #1677ff;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   BOTÃO LOGIN
+========================================================= */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #1677ff;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(22,119,255,.18);
+}
+
+.login-btn:hover {
+
+    background: #0865e5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(22,119,255,.25);
+}
+
+.login-btn span {
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CADASTRO
+========================================================= */
+
+.register {
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #edf1f6;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+.register span {
+
+    color: #78869b;
+
+    margin-right: 5px;
+}
+
+.register a {
+
+    color: #1677ff;
+
+    font-weight: bold;
+}
+
+.register a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SEGURANÇA
+========================================================= */
+
+.security {
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    background: #f4fbf6;
+
+    color: #438158;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding: 20px;
+
+    background: #10264c;
+
+    color: #9dafc9;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .login-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .login-info {
+
+        padding: 40px;
+
+    }
+
+    .login-info h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 18px;
+
+    }
+
+    .logo-icon {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 21px;
+
+    }
+
+    .logo-text h2 {
+
+        font-size: 23px;
+
+    }
+
+    .logo-text span {
+
+        font-size: 10px;
+
+    }
+
+    .back-home a {
+
+        font-size: 12px;
+
+    }
+
+    .login-page {
+
+        padding: 25px 15px;
+
+    }
+
+    .login-info {
+
+        padding: 30px 25px;
+
+    }
+
+    .login-card {
+
+        padding: 35px 25px;
+
+    }
+
+}

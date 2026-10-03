@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lavô+ | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    🧺
+                </div>
+
+                <div class="logo-text">
+                    <h2>Lavô+</h2>
+                    <span>Sua lavanderia online</span>
+                </div>
+
+            </a>
+
+            <div class="back-home">
+                <a href="index.html">
+                    ← Voltar para o início
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+            <!-- LADO ESQUERDO -->
+
+            <div class="login-info">
+
+                <div class="info-icon">
+                    🧺
+                </div>
+
+                <h1>
+                    Bem-vindo de volta!
+                </h1>
+
+                <p>
+                    Entre na sua conta para acompanhar seus pedidos,
+                    agendar coletas e cuidar das suas roupas de forma
+                    simples e rápida.
+                </p>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        📦
+                    </div>
+
+                    <div>
+                        <strong>
+                            Acompanhe seus pedidos
+                        </strong>
+
+                        <span>
+                            Veja em qual etapa está sua roupa.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <strong>
+                            Agende sua coleta
+                        </strong>
+
+                        <span>
+                            Escolha o melhor dia e horário.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        🏠
+                    </div>
+
+                    <div>
+                        <strong>
+                            Receba em casa
+                        </strong>
+
+                        <span>
+                            Suas roupas limpas e dobradas.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LADO DIREITO -->
+
+            <div class="login-card">
+
+                <div class="login-header">
+
+                    <span class="small-tag">
+                        🔐 Acesso seguro
+                    </span>
+
+                    <h2>
+                        Entrar na conta
+                    </h2>
+
+                    <p>
+                        Informe seus dados para continuar.
+                    </p>
+
+                </div>
+
+
+                <!-- FORMULÁRIO -->
+
+                <form id="loginForm">
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                📧
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seuemail@email.com"
+                                required
+                                onchange="validateFields()"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+
+                    <div class="input-group">
+
+                        <div class="password-label">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <a href="#">
+                                Esqueci minha senha
+                            </a>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <span>
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                onclick="mostrarSenha()"
+                            >
+                                👁️
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEMBRAR -->
+
+                    <div class="remember">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="lembrar"
+                            >
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="login-btn"
+                    >
+                        ENTRAR
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- CADASTRO -->
+
+                <div class="register">
+
+                    <span>
+                        Ainda não possui uma conta?
+                    </span>
+
+                    <a href="cadastro.html">
+                        Criar minha conta
+                    </a>
+
+                </div>
+
+
+                <!-- SEGURANÇA -->
+
+                <div class="security">
+
+                    🔒 Seus dados são protegidos com segurança.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Lavô+ — Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+.contato {
+  padding: 70px 8%;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+
+.contato-header {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contato-tag {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contato-header h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.contato-header h1 span {
+  color: #2563eb;
+}
+
+.contato-header p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+
+.contato-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+
+
+
+.contato-info {
+  background: #2563eb;
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.contato-info h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.contato-info > p {
+  color: #dbeafe;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+
+
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.info-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.info-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.info-item h3 {
+  margin: 0 0 3px;
+  font-size: 15px;
+}
+
+.info-item p {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 13px;
+}
+
+
+
+
+.whatsapp-btn {
+  display: block;
+  margin-top: 25px;
+  padding: 12px 18px;
+  background: white;
+  color: #2563eb;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  background: #eff6ff;
+}
+
+
+
+
+.contato-form {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+
+  /* evita o formulário ficar maior que o necessário */
+  align-self: start;
+}
+
+.contato-form h2 {
+  color: #111827;
+  font-size: 25px;
+  margin: 0 0 25px;
+}
+
+
+
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+
+
+.enviar-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.enviar-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+
+
+.localizacao {
+  max-width: 1000px;
+  margin: 55px auto 0;
+  padding: 30px;
+  background: white;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.localizacao h2 {
+  color: #111827;
+  font-size: 25px;
+  margin: 5px 0 10px;
+}
+
+.localizacao p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+
+/* MAPA */
+
+.mapa-placeholder {
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 250px;
+}
+
+.mapa-placeholder iframe {
+  width: 100%;
+  height: 250px;
+  display: block;
+  border: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .contato-container {
+    grid-template-columns: 1fr;
+  }
+
+  .localizacao {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 576px) {
+
+  .contato {
+    padding: 50px 20px;
+  }
+
+  .contato-header {
+    margin-bottom: 35px;
+  }
+
+  .contato-header h1 {
+    font-size: 32px;
+  }
+
+  .contato-header p {
+    font-size: 15px;
+  }
+
+  .contato-info,
+  .contato-form {
+    padding: 22px;
+  }
+
+  .localizacao {
+    padding: 22px;
+  }
+
+  .mapa-placeholder iframe {
+    height: 220px;
+  }
+
+}

@@ -1,0 +1,205 @@
+.cadastro-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f4f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro-container {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cadastro-info {
+  padding: 20px;
+}
+
+.cadastro-info h1 {
+  color: #1769aa;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.cadastro-info > p {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.cadastro-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.benefit > span {
+  font-size: 28px;
+}
+
+.benefit h3 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 17px;
+}
+
+.benefit p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Card */
+
+.cadastro-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(30, 80, 120, 0.12);
+}
+
+.cadastro-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cadastro-header h2 {
+  color: #1e293b;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.cadastro-header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Seções do formulário */
+
+.form-section-title {
+  color: #1769aa;
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.form-group label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dbe3ec;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* Botão */
+
+.cadastro-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #1769aa;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cadastro-button:hover {
+  background: #12558b;
+}
+
+/* Link de login */
+
+.login-link {
+  text-align: center;
+  margin-top: 22px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #1769aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+@media (max-width: 850px) {
+  .cadastro-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .cadastro-info {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .cadastro-info h1 {
+    font-size: 32px;
+  }
+
+  .cadastro-benefits {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .cadastro-page {
+    padding: 20px 12px;
+  }
+
+  .cadastro-card {
+    padding: 22px 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
