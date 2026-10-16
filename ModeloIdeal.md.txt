@@ -1,0 +1,81 @@
+# Lavô+ | Lavanderia Online — Escopo Mestre (modelo IDEAL)
+Fonte de verdade do projeto. Humanos e IAs devem ler tudo antes de propor ou alterar algo. Se algo não estiver aqui: PARE, explique e aguarde autorização.
+
+## I — INTENÇÃO
+Colocar no ar a Lavô+, e-commerce web de lavanderia. O cliente escolhe serviços e preços, usa o carrinho, informa endereço, agenda coleta, paga, acompanha pedidos e histórico, gerencia o perfil e conversa em tempo real com a administração. A administração tem um painel próprio para clientes, pedidos, serviços, preços, pagamentos, coletas, entregas, atendimento, chat e IA. Meta: centralizar a operação em uma aplicação web e automatizar o que este escopo prevê. O projeto está em andamento: o que já funciona (seção A) não deve ser refeito.
+
+## D — DETALHES
+**Stack (fixa)**
+- Front: React, JavaScript, HTML5, CSS3, React Router, Axios, Vite
+- Back: Node.js, Express, API REST
+- Banco: MongoDB, só via Prisma ORM
+- Segurança: JWT, bcrypt, .env (no .gitignore); TLS/SSL planejado para produção
+- Chat: Socket.IO (cliente e admin)
+- IA: iaController.js e iaRoutes.js, usados na página de Administração
+
+Camadas: React (interface, chamadas à API) → Express (regras de negócio, autenticação, validação, pagamentos, automação) → Prisma (único acesso) → MongoDB. Segurança e regras nunca dependem só do front.
+
+**Pastas:** lavanderia/back-end (prisma/schema.prisma, authMiddleware.js, iaController.js, iaRoutes.js, server.js), lavanderia/front-end/cadastro-usuarios/src (components, pages, routes, services, ultils), lavanderia/template.
+
+**Banco (schema.prisma)**
+- Existem: User, Endereco, Servicos, Cart, CartItem, Pedido, PedidoItem, Mensagem.
+- Relações: User→Cart→CartItem→Servicos; User→Pedido→PedidoItem→Servicos; User→Endereco→Pedido; User→Mensagem.
+- Não existem: Payment, Schedule, Coleta, Entrega.
+- Pedido.status é texto (padrão "coleta agendada"); o status de pagamento será separado e depende de Payment.
+- User não tem campo de perfil admin/cliente.
+
+**Regras de negócio e segurança**
+- Senhas só com bcrypt; JWT autentica; rotas privadas usam authMiddleware.
+- A página de Administração funciona, mas SEM proteção por perfil; a autorização admin/cliente está pendente.
+- Agendamento: horário livre reserva, ocupado é recusado; o controle definitivo depende de Schedule.
+- Pagamento: confirmação → back-end valida → Prisma registra → "Pago" → pedido avança. Depende de Payment.
+- Chat: uma sala por cliente; nunca expor a conversa de um cliente a outro; mensagens salvas via Prisma.
+
+## E — EXEMPLOS
+- Fluxo: Login → Serviço → Carrinho → Endereço → Data/horário → Pedido → Pagamento → Coleta → Processamento → Entrega → Finalização.
+- Agendamento: o cliente escolhe "Lavagem de Edredom", data, horário e endereço; o back-end valida, grava via Prisma e impede horário já ocupado.
+- Chat: Cliente React → Socket.IO → Back-end → sala do cliente → Admin React (a resposta faz o caminho inverso).
+- Ideia nova. Certo: "Notei que falta X; sugiro Y. Posso implementar?" e esperar. Errado: implementar Y sozinho.
+- Testes: fluxo completo, login e token inválidos, sem autenticação, rota protegida, pagamento recusado, horário ocupado, cancelamento, falha de comunicação, dados inválidos, histórico e isolamento do chat.
+
+## A — AÇÃO
+Legenda: [x] pronto, [~] em andamento, [ ] pendente.
+
+**Back-end**
+[x] Cadastro, login, JWT, bcrypt
+[x] Recuperação de senha, verificação de e-mail por código
+[x] authMiddleware e rotas protegidas
+[x] Prisma + MongoDB; chat Socket.IO; IA
+[~] API de serviços; validação e tratamento de erros
+[ ] API de carrinho, pedidos, itens e endereços
+[ ] Autorização admin/cliente
+[ ] Agendamento e horários
+[ ] Pagamentos e automação de status
+
+**Front-end cliente**
+[x] Home, Login, Cadastro, Esqueci senha, Verificação de e-mail, Nova senha, Carrinho, Serviços, Preços, Contato, Sobre nós, Chat
+[~] Responsividade, validação de formulários, UX
+[ ] Agendamento, endereço, pagamento
+[ ] Acompanhamento de pedido, histórico, perfil
+
+**Front-end admin**
+[x] Página de Administração, Chat, IA
+[ ] Segurança da página de Administração
+[ ] Dashboard, Pedidos, Clientes, Serviços e preços, Pagamentos, Coletas, Entregas
+
+**Testes**
+[ ] Fluxo completo e cenários de erro
+
+Como trabalhar: só no item que o responsável pedir, uma etapa por vez; nenhum [~] ou [ ] começa sozinho. Ao concluir, informar o que mudou, arquivos e trechos alterados, o que NÃO mudou e as pendências.
+
+## L — LIMITE
+Regras de ouro (humanos e IAs):
+1. Não criar, adicionar, remover ou alterar nada fora deste documento sem autorização explícita (funcionalidades, telas, rotas, endpoints, modelos/campos Prisma, dependências, arquivos, componentes, estilos, refatorações).
+2. Não mexer em [x], salvo bug apontado pelo responsável.
+3. Não presumir que algo existe por estar planejado; não inventar arquivos, rotas, campos ou comportamentos.
+4. Preservar o código existente; sem refatorações não pedidas.
+5. Dúvida ou ideia nova: PARAR → EXPLICAR → AGUARDAR AUTORIZAÇÃO. Nunca assumir autorização.
+
+Fora do escopo agora: app nativo iOS/Android; pagamento em dinheiro na coleta e processos financeiros manuais; novos módulos, troca de stack, novas dependências e alteração do banco sem autorização.
+
+Futuro (só com autorização): versão para Android e iPhone (aplicativo ou outro formato). Não iniciar código, estrutura, planejamento técnico, dependência ou preparação antes de aprovação explícita.

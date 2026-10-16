@@ -1,0 +1,565 @@
+* {
+  box-sizing: border-box;
+}
+
+.agendar-page {
+  min-height: 100vh;
+  background: #f5f8fc;
+  color: #102b50;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.agendar-container {
+  width: 95%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 35px 0 60px;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.agendar-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.voltar {
+  text-decoration: none;
+  font-size: 38px;
+  color: #174d89;
+  line-height: 1;
+}
+
+.agendar-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.agendar-header p {
+  margin: 8px 0 0;
+  color: #607797;
+  font-size: 16px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.checkout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(350px, 0.9fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e0e7ef;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(30, 70, 110, 0.04);
+}
+
+/* =========================
+   CARD ENDEREÇO
+========================= */
+
+.endereco-card {
+  padding: 22px;
+}
+
+.horario-proxima-etapa {
+  color: #718198;
+  font-size: 12px;
+}
+
+.endereco-card .mapa-container {
+  height: 330px;
+  max-width: none;
+  margin: 0;
+}
+
+.endereco-selecionado {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  color: #18385e;
+  font-size: 14px;
+}
+
+.endereco-selecionado span {
+  color: #60758e;
+  line-height: 1.5;
+}
+
+.resumo-mensagem,
+.resumo-erro {
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.resumo-mensagem {
+  color: #60758e;
+}
+
+.resumo-mensagem a {
+  color: #0877e8;
+}
+
+.resumo-erro {
+  color: #b42318;
+}
+
+.card-titulo {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.icone-titulo {
+  font-size: 27px;
+}
+
+.card-titulo h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-titulo p {
+  margin: 5px 0 0;
+  color: #70839d;
+  font-size: 14px;
+}
+
+/* =========================
+   BUSCA
+========================= */
+
+.busca-endereco {
+  height: 52px;
+  border: 1px solid #d5dfeb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.busca-endereco span {
+  font-size: 18px;
+}
+
+.busca-endereco input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #18385e;
+}
+
+.busca-endereco input::placeholder {
+  color: #91a0b3;
+}
+
+/* =========================
+   ENDEREÇOS
+========================= */
+
+.enderecos-titulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 22px 0 12px;
+}
+
+.enderecos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.endereco-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid #dce5ef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.endereco-item:hover {
+  border-color: #1780ed;
+}
+
+.endereco-item.selecionado {
+  border: 2px solid #1680ec;
+}
+
+.endereco-item input {
+  accent-color: #0877e8;
+  width: 18px;
+  height: 18px;
+}
+
+.icone-casa {
+  width: 40px;
+  height: 40px;
+  background: #edf5fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.endereco-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.endereco-info strong {
+  font-size: 14px;
+}
+
+.endereco-info span {
+  color: #73859d;
+  font-size: 13px;
+}
+
+.principal {
+  background: #dceeff;
+  color: #0877e8;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.seta {
+  font-size: 25px;
+  color: #6e849e;
+}
+
+/* =========================
+   NOVO ENDEREÇO
+========================= */
+
+.novo-endereco {
+  width: 100%;
+  height: 50px;
+  margin-top: 12px;
+  border: 1px solid #1680ec;
+  background: white;
+  color: #0877e8;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   AVISO
+========================= */
+
+.aviso {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  background: #eef7ff;
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 18px;
+}
+
+.aviso-icone {
+  font-size: 25px;
+}
+
+.aviso strong {
+  font-size: 13px;
+}
+
+.aviso p {
+  margin: 4px 0 0;
+  color: #617994;
+  font-size: 12px;
+}
+
+/* =========================
+   BOTÃO CONTINUAR
+========================= */
+
+.btn-continuar {
+  width: 100%;
+  height: 52px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #0877e8;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-continuar:hover {
+  background: #0569d0;
+}
+
+.btn-continuar:disabled {
+  background: #9aa9ba;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESUMO
+========================= */
+
+.resumo-card {
+  padding: 20px;
+}
+
+.resumo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e1e8ef;
+}
+
+.resumo-header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+}
+
+.resumo-header a {
+  color: #0877e8;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.produto-icone {
+  width: 55px;
+  height: 55px;
+  border-radius: 9px;
+  background: #eef6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.produto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.produto-info span {
+  color: #74869d;
+  font-size: 13px;
+}
+
+/* =========================
+   VALORES
+========================= */
+
+.valores {
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8ef;
+}
+
+.valores div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.valores span {
+  font-size: 13px;
+  color: #5f7188;
+}
+
+.valores strong {
+  font-size: 13px;
+}
+
+/* =========================
+   TOTAL
+========================= */
+
+.total {
+  background: #edf6ff;
+  padding: 17px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total strong:last-child {
+  font-size: 25px;
+  color: #07599e;
+}
+
+/* =========================
+   BOXES
+========================= */
+
+.resumo-box {
+  background: #f7faff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 12px;
+}
+
+.resumo-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumo-box-header > div {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.resumo-box-header button {
+  border: none;
+  background: none;
+  color: #0877e8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagamento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.pagamento .seta {
+  margin-left: auto;
+}
+
+.endereco-resumo,
+.data-resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 13px;
+  font-size: 12px;
+  color: #60758e;
+}
+
+/* =========================
+   SEGURANÇA
+========================= */
+
+.seguranca {
+  display: flex;
+  gap: 12px;
+  background: #edf7ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.seguranca > span {
+  font-size: 25px;
+}
+
+.seguranca strong {
+  color: #1762a4;
+  font-size: 13px;
+}
+
+.seguranca p {
+  color: #607b98;
+  font-size: 11px;
+  margin: 5px 0 0;
+  line-height: 1.4;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1000px) {
+
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo {
+    order: 2;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .agendar-container {
+    width: 94%;
+    padding-top: 25px;
+  }
+
+  .agendar-header h1 {
+    font-size: 27px;
+  }
+
+  .endereco-card {
+    padding: 15px;
+  }
+
+  .endereco-item {
+    flex-wrap: wrap;
+  }
+
+  .principal {
+    margin-left: auto;
+  }
+
+  .resumo-card {
+    padding: 15px;
+  }
+
+}

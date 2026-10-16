@@ -1,0 +1,341 @@
+.confirmacao-page {
+    min-height: 100vh;
+    background: #f5f8fc;
+    color: #172033;
+}
+
+.checkout-header {
+    position: relative;
+    z-index: auto;
+    padding: 38px 5% 30px;
+    background: linear-gradient(135deg, #eaf4ff 0%, #f7faff 55%, #eef6ff 100%);
+    border-bottom: 1px solid #dce9f7;
+}
+
+.checkout-header-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-title {
+    margin-bottom: 24px;
+}
+
+.checkout-title > span {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #1473e6;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.checkout-header h1 {
+    margin: 0;
+    color: #142b49;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.2;
+}
+
+.checkout-title p {
+    margin: 8px 0 0;
+    color: #5e7189;
+    font-size: 15px;
+}
+
+.confirmacao-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+}
+
+.titulo-secao {
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 5px;
+}
+
+.titulo-secao p {
+    color: #6f7a89;
+}
+
+.card-confirmacao {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    border: 1px solid #e5eaf0;
+}
+
+.card-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.card-titulo h3 {
+    margin: 0;
+}
+
+.agendamento-card .card-titulo {
+    justify-content: flex-start;
+}
+
+.agendamento-card .card-titulo p {
+    margin: 6px 0 0;
+    color: #6f7a89;
+    font-size: 14px;
+}
+
+.agendamento-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.agendamento-campos label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #344b68;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.agendamento-campos input,
+.agendamento-campos select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 12px;
+    border: 1px solid #d7e1ed;
+    border-radius: 9px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+}
+
+.agendamento-campos input:focus,
+.agendamento-campos select:focus {
+    border-color: #1473e6;
+    outline: 3px solid rgba(20, 115, 230, 0.14);
+}
+
+.agendamento-selecionado {
+    margin: 16px 0 0 !important;
+    color: #1762a4 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.agendamento-aviso {
+    margin: 12px 0;
+    color: #667181;
+    font-size: 14px;
+}
+
+.card-titulo button {
+    border: none;
+    background: none;
+    color: #1473e6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item p {
+    margin: 4px 0 0;
+    color: #7a8492;
+}
+
+.card-confirmacao > p {
+    margin: 6px 0;
+    color: #667181;
+}
+
+.pagamento-status {
+    color: #e58a00 !important;
+    font-weight: bold;
+}
+
+.aviso-pagamento {
+    background: #eef7ff;
+    border: 1px solid #cfe7ff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.aviso-pagamento p {
+    margin: 8px 0 0;
+    color: #536174;
+}
+
+.botoes-confirmacao {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-voltar,
+.btn-confirmar {
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-voltar {
+    background: white;
+    border: 1px solid #d7dde5;
+}
+
+.btn-confirmar {
+    flex: 1;
+    border: none;
+    background: #1473e6;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background: #0d63ca;
+}
+
+.resumo-final {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    height: fit-content;
+    border: 1px solid #e5eaf0;
+    position: sticky;
+    top: 20px;
+}
+
+.resumo-final h2 {
+    margin-top: 0;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    color: #596575;
+}
+
+.separador {
+    height: 1px;
+    background: #e5eaf0;
+    margin: 20px 0;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.resumo-total strong {
+    color: #1473e6;
+}
+
+.status-pedido {
+    margin-top: 20px;
+    padding: 12px;
+    background: #fff7e8;
+    color: #b36b00;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.status-pedido span {
+    margin-right: 6px;
+}
+
+.pagamento-erro {
+    margin: 12px 0;
+    color: #b42318;
+}
+
+.pix-cobranca img {
+    display: block;
+    width: min(240px, 100%);
+    margin: 16px auto;
+}
+
+.pix-cobranca label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.pix-cobranca textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 10px;
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.pix-cobranca p,
+.pagamento-resultado {
+    margin-top: 12px;
+    color: #596575;
+}
+
+.pagamento-resultado {
+    padding: 14px;
+    border-radius: 8px;
+    background: #fff7e8;
+}
+
+.pagamento-resultado.aprovado {
+    background: #ecfdf3;
+    color: #067647;
+}
+
+.cartao-form h3 {
+    margin: 0 0 14px;
+}
+
+.btn-confirmar:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+    .checkout-header {
+        padding: 28px 5% 22px;
+    }
+
+    .confirmacao-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-final {
+        position: static;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .agendamento-campos {
+        grid-template-columns: 1fr;
+    }
+}

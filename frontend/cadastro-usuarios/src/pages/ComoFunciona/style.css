@@ -1,0 +1,282 @@
+.como-funciona {
+  padding: 90px 8%;
+  background: #f8fafc;
+
+  /* evita interferência de estilos externos */
+  box-sizing: border-box;
+}
+
+.como-funciona *,
+.como-funciona *::before,
+.como-funciona *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.como-header {
+  text-align: center;
+
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto 60px;
+}
+
+.como-header .tag {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  white-space: normal;
+}
+
+.como-header h2 {
+  width: 100%;
+
+  font-size: 38px;
+  line-height: 1.2;
+
+  margin: 0 0 15px;
+
+  color: #111827;
+
+  font-weight: 700;
+
+  white-space: normal;
+}
+
+.como-header p {
+  width: 100%;
+
+  color: #6b7280;
+
+  font-size: 17px;
+  line-height: 1.6;
+
+  margin: 0;
+
+  white-space: normal;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.etapas {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.etapa {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  background: white;
+
+  padding: 35px 25px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+  transition: 0.3s;
+
+  /* impede conteúdo de escapar do card */
+  overflow: visible;
+}
+
+.etapa:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   NÚMERO
+========================= */
+
+.etapa-numero {
+  position: absolute;
+
+  top: -15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+
+  color: white;
+
+  border-radius: 50%;
+
+  font-weight: bold;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   ÍCONE
+========================= */
+
+.etapa-icon {
+  width: 100%;
+
+  font-size: 45px;
+
+  line-height: 1;
+
+  margin: 15px 0 20px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.etapa h3 {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 12px;
+
+  color: #111827;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  /*
+    ESSENCIAL:
+    permite que o título quebre
+    dentro do card
+  */
+  white-space: normal;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.etapa p {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  white-space: normal;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .como-funciona {
+    padding: 80px 6%;
+  }
+
+  .etapas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 576px) {
+
+  .como-funciona {
+    padding: 70px 20px;
+  }
+
+  .como-header {
+    margin-bottom: 45px;
+  }
+
+  .como-header h2 {
+    font-size: 30px;
+  }
+
+  .como-header p {
+    font-size: 15px;
+  }
+
+  .etapas {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+  .etapa {
+    padding: 35px 22px;
+  }
+
+}

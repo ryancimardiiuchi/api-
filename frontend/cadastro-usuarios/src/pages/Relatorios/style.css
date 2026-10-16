@@ -1,0 +1,707 @@
+.relatorios-page {
+    min-height: 100vh;
+    padding: 35px;
+    background: #f6f7f9;
+    color: #20242b;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.relatorios-topo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-voltar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: white;
+    color: #222;
+
+    border: 1px solid #e3e5e8;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    background: #f0f1f3;
+}
+
+.relatorios-topo h1 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.relatorios-topo p {
+    margin: 5px 0 0;
+
+    color: #7a8089;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.financeiro-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.financeiro-card {
+    background: white;
+
+    border: 1px solid #e4e6e9;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.financeiro-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f0f2f4;
+
+    font-size: 21px;
+}
+
+.financeiro-card span {
+    display: block;
+
+    color: #7b8088;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.financeiro-card h2 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   GRÁFICO
+========================= */
+
+.grafico-card {
+    background: white;
+
+    border: 1px solid #e4e6e9;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.grafico-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.grafico-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.grafico-header p {
+    margin: 6px 0 0;
+
+    color: #858a92;
+
+    font-size: 13px;
+}
+
+.grafico-legenda {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+.grafico-legenda span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #222;
+}
+
+
+/* =========================
+   BARRAS
+========================= */
+
+.grafico {
+    height: 250px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-around;
+
+    gap: 20px;
+
+    padding:
+        10px
+        15px
+        35px;
+
+    border-bottom: 1px solid #e6e7e9;
+}
+
+.grafico-coluna {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: end;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 45px;
+}
+
+.barra-faturamento {
+    width: 42px;
+
+    min-height: 10px;
+
+    background: #25282d;
+
+    border-radius:
+        6px
+        6px
+        0
+        0;
+
+    position: relative;
+
+    transition:
+        height 0.3s,
+        opacity 0.2s;
+}
+
+.barra-faturamento:hover {
+    opacity: 0.75;
+}
+
+.barra-faturamento strong {
+    position: absolute;
+
+    top: -25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    white-space: nowrap;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #555;
+}
+
+.grafico-coluna > span {
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* =========================
+   EXCEL
+========================= */
+
+.excel-area {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 20px;
+}
+
+.btn-excel {
+    width: 46px;
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #198754;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.btn-excel:hover {
+    background: #157347;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   VAZIO
+========================= */
+
+.grafico-vazio {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARREGANDO
+========================= */
+
+.carregando {
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+    .financeiro-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grafico {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+    }
+
+    .grafico-header {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .relatorios-page {
+        padding: 20px;
+    }
+
+    .relatorios-topo h1 {
+        font-size: 24px;
+    }
+}
+.relatorios-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f5f5f5;
+}
+
+
+/* TOPO */
+
+.relatorios-topo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.relatorios-topo h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.relatorios-topo p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.btn-voltar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #222;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    transform: translateX(-3px);
+}
+
+
+/* CARDS */
+
+.financeiro-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.financeiro-card {
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.financeiro-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeee;
+}
+
+.financeiro-icon i {
+    font-size: 24px;
+}
+
+.financeiro-card span {
+    color: #777;
+    font-size: 14px;
+}
+
+.financeiro-card h2 {
+    margin: 4px 0 0;
+    font-size: 24px;
+}
+
+
+/* GRÁFICO */
+
+.grafico-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.grafico-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.grafico-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.grafico-header p {
+    margin: 5px 0 0;
+    color: #888;
+}
+
+.grafico-legenda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+.grafico-legenda span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #222;
+}
+
+
+/* ÁREA DO GRÁFICO */
+
+.grafico {
+    height: 280px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    gap: 20px;
+
+    padding: 20px 10px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* CADA MÊS */
+
+.grafico-coluna {
+    height: 100%;
+
+    flex: 1;
+
+    max-width: 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* BARRA */
+
+.barra-faturamento {
+    width: 45px;
+
+    min-height: 10px;
+
+    background: #222;
+
+    border-radius: 8px 8px 0 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.barra-faturamento:hover {
+    opacity: 0.75;
+}
+
+.barra-faturamento strong {
+    position: absolute;
+
+    top: -25px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.grafico-coluna > span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.grafico-coluna small {
+    color: #999;
+    font-size: 11px;
+}
+
+
+/* SEM DADOS */
+
+.grafico-vazio {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+}
+
+
+/* EXCEL */
+
+.excel-area {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 20px;
+}
+
+.btn-excel {
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #1d6f42;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: 0.2s;
+}
+
+.btn-excel:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .relatorios-page {
+        padding: 20px;
+    }
+
+    .financeiro-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grafico-card {
+        padding: 20px;
+    }
+
+    .grafico {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+    }
+
+    .grafico-coluna {
+        min-width: 60px;
+    }
+
+}
