@@ -1,3 +1,4 @@
+<img width="1908" alt="Captura de tela 2026-10-19 170414" src="https://github.com/user-attachments/assets/c8cedbfd-b1c1-43f2-80ee-d95166a5b92a" />
 # 🧺 Lavô+ | Lavanderia Online
 
 Sistema web de lavanderia online desenvolvido com o objetivo de facilitar o agendamento de coletas, gerenciamento de pedidos e acompanhamento dos serviços de lavagem.
