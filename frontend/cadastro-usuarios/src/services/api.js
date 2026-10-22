@@ -1,7 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.RENDER_URL,
+  // Vite only exposes client-side variables with the VITE_ prefix.
+  // Keep a production fallback so a missing Vercel variable does not
+  // silently redirect API calls to the frontend domain.
+  baseURL:
+    import.meta.env.VITE_RENDER_URL || "https://lavomais.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
