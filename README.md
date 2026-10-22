@@ -24,7 +24,6 @@ Sistema web de lavanderia online desenvolvido com o objetivo de facilitar o agen
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="60px" alt="CSS3"/>
 &nbsp;&nbsp;&nbsp;
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="60px" alt="HTML5"/>
-<img width="60" height="60" alt="excel-removebg-preview" src="https://github.com/user-attachments/assets/b5c4a4ba-73cf-4be7-8f3c-f85866b4da26" />
 
 </div>
 
