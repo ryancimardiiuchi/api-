@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import Lavo from "../assets/img/logo.png";
-
+import Cart from "../assets/icon/cart.png"
+import logout from "../assets/icon/sair.png"
 function Navbar() {
   const [usuario, setUsuario] = useState(null);
   const [Sair, setSair] = useState(false);
@@ -77,7 +78,7 @@ function Navbar() {
     {Sair && (
       <div className="perfil-menu">
         <button className="btn-perfil"onClick={sair}>
-          ⇥ Sair
+          <img src={logout} alt="Sair" /> 
         </button>
       </div>
     )}
@@ -89,7 +90,8 @@ function Navbar() {
           )}
 
           <Link to="/carrinho">
-            <button className="btn-carrinho">🛒 Carrinho</button>
+            <button className="btn-carrinho">
+              <img src={Cart} alt="Cart" />Carrinho</button>
           </Link>
         </nav>
       </header>

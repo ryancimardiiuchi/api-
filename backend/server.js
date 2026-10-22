@@ -1018,7 +1018,25 @@ app.put("/servicos/:id", verificarToken, verificarAdmin, async (req, res) => {
 });
 app.get("/pedidos", verificarToken, verificarAdmin, async (req, res) => {
   try {
+    const hojeSaoPaulo = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Sao_Paulo",
+    }).format(new Date());
+    const inicioDoDia = new Date(`${hojeSaoPaulo}T03:00:00.000Z`);
+    const inicioDoProximoDia = new Date(inicioDoDia);
+    inicioDoProximoDia.setUTCDate(inicioDoProximoDia.getUTCDate() + 1);
     const pedidos = await prisma.pedido.findMany({
+      where: {
+        OR: [
+          { status: { not: "Entregue" } },
+          {
+            status: "Entregue",
+            entregueEm: {
+              gte: inicioDoDia,
+              lt: inicioDoProximoDia,
+            },
+          },
+        ],
+      },
       include: {
         user: {
           select: {
@@ -1078,6 +1096,7 @@ app.put("/pedidos/:id", verificarToken, verificarAdmin, async (req, res) => {
     },
     data: {
       status: status,
+      entregueEm: status === "Entregue" ? new Date() : null,
     },
   });
   res.status(200).json({ message: "Pedido Atualizado" });

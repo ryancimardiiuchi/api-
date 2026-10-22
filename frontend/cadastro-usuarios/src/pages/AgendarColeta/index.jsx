@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import  MapaColeta  from "../Mapa";
 import api from "../../services/api.js";
 import CheckoutSteps from "../../components/CheckoutSteps.jsx";
+import Cart from "../../assets/icon/cart.png"
 
 const TAXA_COLETA = 5;
 const formatarMoeda = (valor) =>
@@ -194,7 +195,7 @@ function AgendarColeta() {
               <div className="resumo-header">
 
                 <div>
-                  🛒
+                  <img src={Cart} alt="Cart" />
                   <strong>Resumo do pedido</strong>
                 </div>
 
@@ -339,8 +340,6 @@ function AgendarColeta() {
 
               </div>
 
-
-              {/* SEGURANÇA */}
               <div className="seguranca">
 
                 <span>🛡️</span>

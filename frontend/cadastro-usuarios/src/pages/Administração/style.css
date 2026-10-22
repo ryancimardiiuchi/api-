@@ -1439,3 +1439,41 @@
 .chatbot-line-space {
   height: 7px;
 }
+.chatbot-voice-button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8e0eb;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #243b53;
+  font-size: 19px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.chatbot-voice-button:hover {
+  background: #f0f5fa;
+  border-color: #9aafc5;
+}
+
+.chatbot-voice-button:active {
+  transform: scale(0.96);
+}
+
+.chatbot-voice-button.active {
+  background: #e7f0ff;
+  border-color: #4677c8;
+  color: #245bb5;
+}
+
+.chatbot-voice-button:focus-visible {
+  outline: 2px solid #4677c8;
+  outline-offset: 3px;
+}

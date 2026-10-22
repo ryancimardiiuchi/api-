@@ -1,5 +1,5 @@
 import "./style.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { CardPayment, initMercadoPago } from "@mercadopago/sdk-react";
 import api from "../../services/api.js";
@@ -25,6 +25,8 @@ function ConfirmacaoPedido() {
     const [pedido, setPedido] = useState(null);
     const [dataColeta, setDataColeta] = useState("");
     const [horarioColeta, setHorarioColeta] = useState("");
+    const [tentativasRegistro, setTentativasRegistro] = useState(0);
+    const pedidoEmCriacao = useRef(false);
 
     useEffect(() => {
         if (!pagamento?.id || pagamento.status === "approved" || !pagamento.qrCode) {
@@ -98,21 +100,54 @@ function ConfirmacaoPedido() {
         valorAdiantado > 0
     );
 
-    async function garantirPedido() {
-        if (pedido) return pedido;
-        if (!state?.enderecoColeta?.id || !agendamentoCompleto) {
-            throw new Error("Escolha um endereço, uma data e um horário válidos.");
+    useEffect(() => {
+        if (
+            pagamento?.status !== "approved" ||
+            !pagamento?.id ||
+            pedido ||
+            pedidoEmCriacao.current ||
+            !state?.enderecoColeta?.id ||
+            !agendamentoCompleto
+        ) {
+            return;
         }
 
-        const resposta = await api.post("/api/pedidos", {
+        pedidoEmCriacao.current = true;
+        setCarregando(true);
+
+        api.post("/api/pedidos", {
             EnderecoId: state.enderecoColeta.id,
             dataColeta,
             horarioColeta,
             formaPagamento,
-        });
-        setPedido(resposta.data.pedido);
-        return resposta.data.pedido;
-    }
+            pagamentoId: String(pagamento.id),
+        })
+            .then((resposta) => {
+                setPedido(resposta.data.pedido);
+                setErro("");
+            })
+            .catch((error) => {
+                console.error("Erro ao registrar pedido após pagamento aprovado:", error);
+                setErro(
+                    error.response?.data?.erro ||
+                    "O pagamento foi aprovado, mas não foi possível registrar o pedido."
+                );
+            })
+            .finally(() => {
+                pedidoEmCriacao.current = false;
+                setCarregando(false);
+            });
+    }, [
+        agendamentoCompleto,
+        dataColeta,
+        formaPagamento,
+        horarioColeta,
+        pagamento?.id,
+        pagamento?.status,
+        pedido,
+        state?.enderecoColeta?.id,
+        tentativasRegistro,
+    ]);
 
     async function criarPagamentoPix() {
         if (!agendamentoCompleto) {
@@ -129,7 +164,6 @@ function ConfirmacaoPedido() {
         setErro("");
 
         try {
-            await garantirPedido();
             const resposta = await api.post("/api/pagamento", {
                 formaPagamento,
                 metodoTaxa,
@@ -158,7 +192,6 @@ function ConfirmacaoPedido() {
         setErro("");
 
         try {
-            await garantirPedido();
             const resposta = await api.post("/api/pagamento", {
                 formaPagamento,
                 metodoTaxa,
@@ -337,6 +370,25 @@ function ConfirmacaoPedido() {
                                 </button>
                             )}
                         </>
+                    )}
+
+                    {pagamentoAprovado && !pedido && (
+                        <div className="pagamento-resultado aprovado">
+                            <p>
+                                {carregando
+                                    ? "Pagamento aprovado. Registrando pedido..."
+                                    : "Pagamento aprovado. O pedido ainda não foi registrado."}
+                            </p>
+                            {!carregando && (
+                                <button
+                                    className="btn-confirmar"
+                                    type="button"
+                                    onClick={() => setTentativasRegistro((tentativa) => tentativa + 1)}
+                                >
+                                    Tentar registrar pedido
+                                </button>
+                            )}
+                        </div>
                     )}
 
                     {!pagamento && cartao && agendamentoCompleto && (

@@ -133,7 +133,7 @@ function Contato() {
             </div>
 
             <a
-              href="https://wa.me/5549999471251"
+              href="https://api.whatsapp.com/send/?phone=5549999471251&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noreferrer"
               className="whatsapp-btn"

@@ -68,19 +68,23 @@ model Servicos {
   itensPedido PedidoItem[]
 }
 
+
 model Pedido {
-  id             String       @id @default(auto()) @map("_id") @db.ObjectId
-  UserId         String       @db.ObjectId
-  EnderecoId     String       @db.ObjectId
-  valor          Float
-  status         String       @default("coleta agendada")
-  dataPedido     DateTime     @default(now())
-  dataColeta     DateTime?
-  horarioColeta  String?
-  formaPagamento String?
-  itensPedido    PedidoItem[]
-  user           User         @relation(fields: [UserId], references: [id])
-  endereco       Endereco     @relation(fields: [EnderecoId], references: [id])
+  id                String       @id @default(auto()) @map("_id") @db.ObjectId
+  UserId            String       @db.ObjectId
+  EnderecoId        String       @db.ObjectId
+  valor             Float
+  status            String       @default("aguardando pagamento")
+  dataPedido        DateTime     @default(now())
+  dataColeta        DateTime?
+  horarioColeta     String?
+  entregueEm        DateTime?
+  formaPagamento    String?
+  pagamentoId       String?
+  statusPagamento   String       @default("pending")
+  itensPedido       PedidoItem[]
+  user              User         @relation(fields: [UserId], references: [id])
+  endereco          Endereco     @relation(fields: [EnderecoId], references: [id])
 }
 
 model Endereco {
